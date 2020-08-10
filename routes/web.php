@@ -14,6 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/proyek', function () {
+    return view('proyek');
+});
+Route::get('/proyek/create', function () {
+    return view('create');
+});
+Route::get('/proyek/{id}/daftarkan-staff', function () {
+    return view('daftarkan-staff');
+});
+Route::get('/proyek/{id}/edit', function () {
+    return view('edit');
+});
+Route::get('/proyek/{id}', function () {
+    return view('id');
+});
+Route::get('/karyawan', function () {
+    return view('karyawan');
+});
+Route::get('/karyawan/{id_karyawan}/daftar-proyek', function () {
+    return view('daftar-proyek');
+});
 
 Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
 Route::post('/items', 'ItemController@store'); // menyimpan data
